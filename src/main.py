@@ -1,5 +1,10 @@
+from ingestion.message_parser import identify_city
+
+
 def main():
-    print("Python report ingestion project started.")
+    subject = "UbiVu | City of Santa Fe New Mexico | Santa Fe Nodes"
+    city = identify_city(subject)
+    print(city)
 
 
 if __name__ == "__main__":
