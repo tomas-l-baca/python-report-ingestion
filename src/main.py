@@ -1,3 +1,4 @@
+from ingestion.file_naming import build_report_filename
 from ingestion.message_parser import identify_city, extract_download_url
 
 
@@ -7,9 +8,11 @@ def main():
 
     city = identify_city(subject)
     download_url = extract_download_url(body)
+    report_filename = build_report_filename(city)
 
     print(city)
     print(download_url)
+    print(report_filename)
 
 
 if __name__ == "__main__":
